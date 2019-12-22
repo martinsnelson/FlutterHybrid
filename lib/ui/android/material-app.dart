@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imc/themes/theme.dart';
 import 'package:imc/ui/android/pages/home.page.dart';
-import 'package:imc/ui/android/pages/splash.page.dart';
 
 class MyMaterialApp extends StatelessWidget {
   @override
@@ -9,8 +7,10 @@ class MyMaterialApp extends StatelessWidget {
     return MaterialApp(
       title: 'imc',
       debugShowCheckedModeBanner: false,
-      theme: appTheme(),
-      home: SplashPage(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: HomePage(),
     );
   }
 }
